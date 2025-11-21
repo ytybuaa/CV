@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 你的简历：[姓名] 的技术与思考</title>
+    <style>
+        /* CSS 样式：干净、专业、适合打印 */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .resume-container {
+            width: 850px; /* 标准A4纸宽度 */
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .header-contact {
+            text-align: right;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .header-contact a {
+            color: #3498db;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .section-content {
+            margin-bottom: 25px;
+        }
+        .job-title, .project-name {
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 15px;
+            display: block;
+        }
+        .duration {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            float: right;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* 打印样式优化：移除背景和阴影 */
+        @media print {
+            body { background: none; padding: 0; }
+            .resume-container { box-shadow: none; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <header>
+            <h1>张三 (ZHANG SAN)</h1>
+            <div class="header-contact">
+                邮箱: <a href="mailto:zhangsan@email.com">zhangsan@email.com</a> |
+                电话: 138-0000-0000 |
+                GitHub: <a href="https://github.com/yourusername">/yourusername</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>📝 职业概述</h2>
+            <div class="section-content">
+                <p>
+                    一位热衷于前端交互和数据可视化的软件工程师，拥有 3 年大型项目开发经验。擅长 JavaScript (ES6+), React/Vue 框架，并对用户体验设计有深刻理解。追求代码质量和系统性能的完美平衡。
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>💼 工作经历</h2>
+            <div class="section-content">
+                <span class="job-title">高级前端开发工程师 - 创新科技公司</span>
+                <span class="duration">2022.01 - 至今</span>
+                <ul>
+                    <li>主导开发下一代数据看板系统，使用 React Hooks 和 D3.js，将渲染性能提升 40%。</li>
+                    <li>构建并维护公司级 UI 组件库，文档完善率 100%，被 10+ 个内部项目复用。</li>
+                    <li>参与 CI/CD 流程优化，通过自动化测试覆盖率从 50% 提高到 85%。</li>
+                </ul>
+                
+                <span class="job-title">初级软件工程师 - 梦想孵化器</span>
+                <span class="duration">2020.07 - 2021.12</span>
+                <ul>
+                    <li>负责公司官方网站的日常维护和功能迭代，掌握了基础的 HTML/CSS/JS 技能。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 教育背景</h2>
+            <div class="section-content">
+                <span class="job-title">北京航空航天大学-电子科学与技术 (本科)</span>
+                <span class="duration">2022.09 - 2026.06</span>
+                <ul>
+                    <li>主修数据结构、算法分析、操作系统等核心课程。</li>
+                    <li>多次获得校级奖学金，毕业设计被评为优秀作品。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>💡 核心技能</h2>
+            <div class="section-content">
+                <ul>
+                    <li>**前端开发:** JavaScript (ES6+), TypeScript, React, Vue.js, Webpack, Babel.</li>
+                    <li>**可视化:** D3.js, ECharts, Chart.js.</li>
+                    <li>**工具与环境:** Git/GitHub, Docker, Node.js, Vercel/Netlify 部署。</li>
+                    <li>**设计:** 响应式设计 (RWD), SCSS/Less, UI/UX 基本原则。</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
