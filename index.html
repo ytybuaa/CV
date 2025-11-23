@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,61 +12,55 @@
             line-height: 1.6;
             margin: 0;
             padding: 50px;
-            background-color: #f9f9f9; /* 背景改为极浅的灰色，衬托中间的简历纸张感 */
-            color: #333333; 
+            background-color: #f9f9f9;
+            /* 背景改为极浅的灰色，衬托中间的简历纸张感 */
+            color: #333333;
         }
+
         .resume-container {
             width: 850px;
             margin: 0 auto;
-            background-color: white; /* 简历主体保持纯白 */
+            background-color: white;
+            /* 简历主体保持纯白 */
             padding: 40px;
             /* 给简历纸张加一点点阴影，更有质感 */
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
         }
 
-        /* --- 重点修改区域：顶部 Header 样式 --- */
-        /* --- 重点修改区域：顶部 Header 样式 --- */
         .header-container {
             display: flex;
-            justify-content: space-between; 
-            align-items: center; 
-            
+            justify-content: space-between;
+            align-items: center;
+
             /* --- 核心修改：背景图层叠加 (顺序很重要，最上面的在最顶层) --- */
-            background-image: 
-                /* 第1层 (最上面): 底部渐变白雾。
-                   含义：从上到下，前70%是完全透明的，最后30%逐渐变成纯白。
-                   这样图片底部就会"消失"在白色背景中 */
-                linear-gradient(to bottom, rgba(255,255,255,0) 70%, #ffffff 100%),
-                
-                /* 第2层 (中间): 全局半透明遮罩。
-                   含义：让整张图片稍微白一点，保证黑色文字能看清。
-                   (0.8 表示 80% 的白色，如果您觉得图片太淡，可以把 0.8 改成 0.5) */
+            background-image:
+
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #ffffff 100%),
+
                 linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-                
-                /* 第3层 (最下面): 您的图片文件 */
-                url('banner.jpg'); 
-            
-            background-size: cover;      
-            background-position: center; 
-            
-            /* --- 布局设置 (保持之前的全宽设置) --- */
-            margin-top: -40px;    /* 拉到最顶上 */
-            margin-left: -40px;   /* 拉到最左边 */
-            margin-right: -40px;  /* 拉到最右边 */
-            
+
+                url('banner.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            margin-top: -40px;
+            margin-left: -40px;
+            margin-right: -40px;
+
             /* 增加内边距 */
             padding: 40px;
-            
+
             /* 设为直角 */
             border-radius: 0;
-            
-            margin-bottom: 30px; 
-            border-bottom: none; 
+
+            margin-bottom: 30px;
+            border-bottom: none;
         }
 
         /* 左侧文本区域 */
         .header-left {
-            flex: 1; 
+            flex: 1;
         }
 
         h1 {
@@ -75,37 +70,39 @@
             font-size: 2.5em;
             font-weight: 700;
             /* 移除之前的下划线，因为现在在背景框里 */
-            border-bottom: none; 
+            border-bottom: none;
             padding-bottom: 0;
         }
 
         /* 联系方式样式 */
         .header-contact {
-            text-align: left; 
-            font-size: 0.95em; 
-            color: #333333; /* 加深一点颜色，防止背景干扰 */
-            line-height: 1.8; 
+            text-align: left;
+            font-size: 0.95em;
+            color: #333333;
+            /* 加深一点颜色，防止背景干扰 */
+            line-height: 1.8;
             font-weight: 500;
         }
+
         .header-contact a {
-            color: #111111; 
-            text-decoration: underline; 
+            color: #111111;
+            text-decoration: underline;
         }
 
         /* 照片样式 */
         .profile-photo {
-            width: 110px;  
-            height: 110px; 
-            border-radius: 50%; 
-            object-fit: cover; 
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
             /*以此白色边框将照片与背景图隔开*/
-            border: 4px solid #ffffff; 
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* 给照片加点投影 */
-            margin-left: 20px; 
+            border: 4px solid #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            /* 给照片加点投影 */
+            margin-left: 20px;
         }
 
-        /* --- 以下是其余部分样式，保持不变 --- */
-        
+
         h2 {
             color: #333333;
             margin-top: 30px;
@@ -114,9 +111,11 @@
             font-size: 1.5em;
             font-weight: 600;
         }
+
         .section-content {
             margin-bottom: 15px;
         }
+
         .item-title {
             font-weight: 700;
             color: #333333;
@@ -124,55 +123,73 @@
             display: block;
             font-size: 1.1em;
         }
+
         .duration {
             font-style: normal;
             color: #666666;
             font-size: 0.85em;
             float: right;
         }
+
         ul {
             list-style: square;
             padding-left: 20px;
         }
+
         li {
             margin-bottom: 6px;
             font-size: 0.95em;
         }
+
         .code-emphasis {
-            font-family: 'Consolas', 'Monaco', monospace; 
-            background-color: #f5f5f5; 
+            font-family: 'Consolas', 'Monaco', monospace;
+            background-color: #f5f5f5;
             padding: 2px 4px;
             border-radius: 3px;
             font-weight: 600;
-            color: #333333; 
+            color: #333333;
         }
 
         @media print {
-            body { background: white; padding: 0; }
-            .resume-container { box-shadow: none; border: none; width: 100%; padding: 0;}
-            /* 打印时通常建议移除背景图以省墨，或者强制打印背景 */
-             .header-container { 
-                background-image: none !important; 
-                border-bottom: 2px solid #333; /* 打印时恢复黑线条 */
+            body {
+                background: white;
                 padding: 0;
-            } 
-            .profile-photo { border: none; box-shadow: none; }
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                padding: 0;
+            }
+
+            .header-container {
+                background-image: none !important;
+                border-bottom: 2px solid #333;
+                padding: 0;
+            }
+
+            .profile-photo {
+                border: none;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="resume-container">
-        
+
         <header class="header-container">
             <div class="header-left">
                 <h1>袁天宇</h1>
                 <div class="header-contact">
-                    <div>21岁 | 男  </div>
+                    <div>21岁 | 男 </div>
                     <div>邮箱: 22373338@buaa.edu.cn</div>
                 </div>
             </div>
-            
+
             <img src="profile.jpg" alt="袁天宇照片" class="profile-photo">
         </header>
 
@@ -181,38 +198,46 @@
             <div class="section-content">
                 <span class="item-title">本科 | 北京航空航天大学 (BEIHANG UNIVERSITY) - 电子信息工程学院 电子科学与技术 </span>
                 <span class="duration">2022.09 - 2026.06 </span>
-                <div >
+                <div>
                     <ul>
-                        <li><strong>前六学期 GPA:        /4.00 | 专业排名:      /33    | 综合量化成绩排名     /225      </strong></li>  
+                        <li><strong>前六学期 GPA: /4.00 | 专业排名: /33 | 综合量化成绩排名 /225 </strong></li>
                     </ul>
                 </div>
-                
+
                 <p><strong>有代表性的专业课</strong>:</p>
                 <ul>
-                    <li>数字信号处理 (<span class="code-emphasis">91</span>)，信息论基础 (<span class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>), 工科数学分析(1) (<span class="code-emphasis">88</span>) </li>
-                    <li>自动控制原理 (<span class="code-emphasis">90</span>)，高频电子电路 (<span class="code-emphasis">87</span>)，信号与系统 (<span class="code-emphasis">87</span>)，电路分析 (<span class="code-emphasis">85</span>) </li>
+                    <li>数字信号处理 (<span class="code-emphasis">91</span>)，信息论基础 (<span
+                            class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>), 工科数学分析(1)
+                        (<span class="code-emphasis">88</span>) </li>
+                    <li>自动控制原理 (<span class="code-emphasis">90</span>)，高频电子电路 (<span
+                            class="code-emphasis">87</span>)，信号与系统 (<span class="code-emphasis">87</span>)，电路分析 (<span
+                            class="code-emphasis">85</span>) </li>
                 </ul>
             </div>
         </section>
         <section>
-            <h2>校级荣誉与奖学金 </h2>
+            <h2>奖学金 </h2>
             <div class="section-content">
                 <ul>
                     <div class="award-item">
                         <li><span>2024——2025年 北京航空航天大学本科生校级学习优秀</span>
-                        <span class="duration">二等奖学金</span></li>
-                    <div class="award-item">
-                        <li><span>2023——2024年 北京航空航天大学本科生校级学习优秀</span>
-                        <span class="duration">二等奖学金</span></li>
-                    </div>
-                    <div class="award-item">
-                        <li><span>2023——2024年 北京航空航天大学学科竞赛</span>
-                        <span class="duration">特等奖学金</span></li>
-                    </div>
-                    <div class="award-item">
-                        <li><span>2023——2024年 北京航空航天大学创新创业</span>
-                        <span class="duration">一等奖学金</span></li>
-                    </div>
+                            <span class="duration">二等奖学金</span>
+                        </li>
+                        <div class="award-item">
+                            <li><span>2023——2024年 北京航空航天大学本科生校级学习优秀</span>
+                                <span class="duration">二等奖学金</span>
+                            </li>
+                        </div>
+                        <div class="award-item">
+                            <li><span>2023——2024年 北京航空航天大学学科竞赛</span>
+                                <span class="duration">特等奖学金</span>
+                            </li>
+                        </div>
+                        <div class="award-item">
+                            <li><span>2023——2024年 北京航空航天大学创新创业</span>
+                                <span class="duration">一等奖学金</span>
+                            </li>
+                        </div>
                 </ul>
             </div>
         </section>
@@ -230,13 +255,13 @@
                 <ul>
                     <li>一等奖 (团队排名 1/3) </li>
                 </ul>
-                
+
                 <span class="item-title">蓝桥杯电子赛(单片机) (省部级) </span>
                 <span class="duration">2024年</span>
                 <ul>
                     <li>二等奖 (个人赛)</li>
                 </ul>
-                
+
                 <span class="item-title">北京市集成电路竞赛 (省部级)</span>
                 <span class="duration">2025年</span>
                 <ul>
@@ -256,38 +281,47 @@
                 <span class="item-title">算法方面——基于深度学习的图像压缩预编码</span>
                 <span class="duration">2025. 07——2025.08 </span>
                 <ul>
-                    <li><strong>项目背景:</strong> 在指导下<strong>独立复现</strong>该算法。旨在通过预编码网络对图像进行前处理，在不改变现有编解码器标准的前提下，显著提升低码率下的图像细节表现和感知质量。</li>
-                    <li><strong>训练策略:</strong> 设计分阶段训练。初期利用 <span class="code-emphasis">Mimic Codec</span> (模拟编解码器) 确保网络捕获压缩特征；进而引入<strong>对抗性训练</strong>，借鉴<span class="code-emphasis">黑盒攻击</span>思想，利用真实编解码器生成高质量“伪标签”以指导优化。</li>
-                    <li><strong>核心优化:</strong> 构建基于 <span class="code-emphasis">GAN</span> 的联合优化循环。将伪标签作为判别器输入，生成器根据判别器的反馈不断迭代参数，通过这种“生成-判别”的博弈循环，有效解决了传统预编码难以对真实Codec进行端到端优化的问题。</li>
+                    <li><strong>项目背景:</strong>
+                        在指导下<strong>独立复现</strong>该算法。旨在通过预编码网络对图像进行前处理，在不改变现有编解码器标准的前提下，显著提升低码率下的图像细节表现和感知质量。</li>
+                    <li><strong>训练策略:</strong> 设计分阶段训练。初期利用 <span class="code-emphasis">Mimic Codec</span> (模拟编解码器)
+                        确保网络捕获压缩特征；进而引入<strong>对抗性训练</strong>，借鉴<span
+                            class="code-emphasis">黑盒攻击</span>思想，利用真实编解码器生成高质量“伪标签”以指导优化。</li>
+                    <li><strong>核心优化:</strong> 构建基于 <span class="code-emphasis">GAN</span>
+                        的联合优化循环。将伪标签作为判别器输入，生成器根据判别器的反馈不断迭代参数，通过这种“生成-判别”的博弈循环，有效解决了传统预编码难以对真实Codec进行端到端优化的问题。</li>
                 </ul>
 
                 <span class="item-title">嵌入式方面——全国大学生电子设计竞赛 单相功率分析仪 (基于FFT的THD谐波分析) </span>
                 <span class="duration">2024.08 </span>
                 <ul>
                     <li><strong>核心职责:</strong> 负责系统<strong>硬件前端与嵌入式信号处理</strong>。设计模拟电路采集高压市电信号，并实现高精度的电压电流采样与隔离。</li>
-                    <li><strong>技术实现:</strong> 利用嵌入式设备进行数字滤波，部署 <span class="code-emphasis">FFT</span> 算法在低资源 MCU 上实现高阶谐波分析，实时计算功率因数与总谐波失真(THD)。</li>
+                    <li><strong>技术实现:</strong> 利用嵌入式设备进行数字滤波，部署 <span class="code-emphasis">FFT</span> 算法在低资源 MCU
+                        上实现高阶谐波分析，实时计算功率因数与总谐波失真(THD)。</li>
                 </ul>
 
-                <span class="item-title">嵌入式方面——基于颗粒物浓度和可见光图像的粉尘超标预警技术 (北航电创赛项目) </span>
+                <span class="item-title">嵌入式方面——基于颗粒物浓度和可见光图像的粉尘超标预警技术 (北航冯如杯项目) </span>
                 <span class="duration">2024.10——2025.03 </span>
                 <ul>
-                    <li><strong>核心职责:</strong> 负责 <span class="code-emphasis">Jetson Nano</span> 边缘计算平台的 <strong>Linux 系统开发</strong>与环境部署。</li>
-                    <li><strong>技术实现:</strong> 部署 <span class="code-emphasis">YoloV8</span> 轻量化模型实现粉尘烟雾的实时目标检测；设计多模态通信链路，同时支持 <span class="code-emphasis">5G</span> 高速图传与 <span class="code-emphasis">LoRa</span> 远距离低功耗控制信号传输。</li>
+                    <li><strong>核心职责:</strong> 负责 <span class="code-emphasis">Jetson Nano</span> 边缘计算平台的 <strong>Linux
+                            系统开发</strong>与环境部署。</li>
+                    <li><strong>技术实现:</strong> 部署 <span class="code-emphasis">YoloV8</span>
+                        轻量化模型实现粉尘烟雾的实时目标检测；设计多模态通信链路，同时支持 <span class="code-emphasis">5G</span> 高速图传与 <span
+                            class="code-emphasis">LoRa</span> 远距离低功耗控制信号传输。</li>
                 </ul>
             </div>
         </section>
-        
+
         <section>
             <h2>技能和感兴趣的研究方向 </h2>
             <div class="section-content">
                 <ul>
-                    <li>主要技能: <span class="code-emphasis">C</span>、<span class="code-emphasis">Verilog</span>、<span class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
+                    <li>编程语言: <span class="code-emphasis">C</span>、<span class="code-emphasis">Verilog</span>、<span
+                            class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
                     <li>工具与平台:熟悉 Linux 操作系统，熟悉嵌入式系统开发调试，熟悉PCB 电路设计。</li>
-                    <li>Research Interests:通信感知一体化，无线通信、深度学习、目标识别检测与跟踪、雷达信号处理 。</li>
+                    <li>Research Interests:通信感知一体化、无线通信、深度学习、目标识别检测与跟踪、雷达信号处理 。</li>
                 </ul>
             </div>
         </section>
-        
+
         <section>
             <h2> Personal Development Plan</h2>
             <div class="section-content">
@@ -298,4 +332,5 @@
     </div>
 
 </body>
+
 </html>
