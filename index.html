@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟 北京航空航天大学 袁天宇</title>
+    <title> 北京航空航天大学 袁天宇</title>
     <style>
         /* CSS 样式：黑白极简风格 (Monochrome Minimalist) */
         body {
@@ -87,23 +87,77 @@
             font-weight: 600;
             color: #333333; 
         }
+        /* 新增：Header 弹性容器，用于左右布局 */
+        .header-container {
+            display: flex;
+            justify-content: space-between; /* 内容分布在左右两端 */
+            align-items: flex-start; /* 顶部对齐 */
+            border-bottom: 2px solid #333333; /* 将原 h1 的底线移到这里 */
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
 
+        /* 新增：左侧文本区域 */
+        .header-left {
+            flex: 1; /* 占据剩余空间 */
+        }
+
+        /* 修改：h1 样式 (移除了原来的底线和部分边距，适应新布局) */
+        h1 {
+            color: #111111;
+            /* border-bottom: 2px solid #333333;  <-- 已移除 */
+            /* padding-bottom: 10px; <-- 已移除 */
+            margin-top: 0;
+            margin-bottom: 10px; /* 减小下方边距 */
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        /* 修改：联系方式样式 (改为左对齐) */
+        .header-contact {
+            text-align: left; /* <-- 改为左对齐 */
+            font-size: 0.95em; /* 稍微调大一点点 */
+            color: #666666;
+            line-height: 1.8; /* 增加行高，使多行显示更清晰 */
+        }
+        .header-contact div {
+             margin-bottom: 4px; /* 如果联系信息分行显示，增加间距 */
+        }
+
+        /* 新增：照片样式 */
+        .profile-photo {
+            width: 120px;  /* 照片宽度 */
+            height: 120px; /* 照片高度，保持与宽度一致以呈正圆形 */
+            border-radius: 50%; /* 设置为圆形 */
+            object-fit: cover; /* 确保照片填充且不变形 */
+            border: 3px solid #f0f0f0; /* 添加一个极浅的灰色边框，增加层次感 */
+            margin-left: 30px; /* 与左侧文字保持距离 */
+            
+            /* 可选：如果您希望照片也完全变为黑白，取消下面这行的注释 */
+            /* filter: grayscale(100%); */
+        }
         /* 打印样式优化：确保最佳打印效果 */
         @media print {
             body { background: white; padding: 0; }
             .resume-container { box-shadow: none; border: none; width: 100%; }
         }
+
     </style>
 </head>
 <body>
 
     <div class="resume-container">
         
-        <header>
-            <h1>袁天宇 </h1>
-            <div class="header-contact">
-                电话: <a href="tel:"></a> | 学号: 2237 | 21岁  男
+        <header class="header-container">
+            <div class="header-left">
+                <h1>袁天宇</h1>
+                <div class="header-contact">
+                    <div>21岁 | 男 | </div>
+                    <div>邮箱: 22373338@buaa.edu.cn</div>
                 </div>
+            </div>
+            
+            <img src="profile.jpg" alt="袁天宇照片" class="profile-photo">
         </header>
 
         <section>
@@ -113,13 +167,13 @@
                 <span class="duration">2022.09 - 2026.06 </span>
                 <div >
                     <ul>
-                        <li><strong>前六学期 GPA:         | 专业排名:          | 综合量化成绩           </strong></li>  
+                        <li><strong>前六学期 GPA:        /4.00 | 专业排名:      /33    | 综合量化成绩排名     /225      </strong></li>  
                     </ul>
                 </div>
                 
                 <p><strong>有代表性的专业课</strong>:</p>
                 <ul>
-                    <li>数字信号处理 (<span class="code-emphasis">91</span>)，信息论基础 (<span class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>) </li>
+                    <li>数字信号处理 (<span class="code-emphasis">91</span>)，信息论基础 (<span class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>),工科数学分析(1) (<span class="code-emphasis">88</span>) </li>
                     <li>自动控制原理 (<span class="code-emphasis">90</span>)，高频电子电路 (<span class="code-emphasis">87</span>)，信号与系统 (<span class="code-emphasis">87</span>)，电路分析 (<span class="code-emphasis">85</span>) </li>
                 </ul>
             </div>
@@ -129,18 +183,18 @@
             <div class="section-content">
                 <ul>
                     <div class="award-item">
-                        <li><span>2024–2025年 北京航空航天大学本科生校级学习优秀</span>
+                        <li><span>2024——2025年 北京航空航天大学本科生校级学习优秀</span>
                         <span class="duration">二等奖学金</span></li>
                     <div class="award-item">
-                        <li><span>2023–2024年 北京航空航天大学本科生校级学习优秀</span>
+                        <li><span>2023——2024年 北京航空航天大学本科生校级学习优秀</span>
                         <span class="duration">二等奖学金</span></li>
                     </div>
                     <div class="award-item">
-                        <li><span>2023–2024年 北京航空航天大学学科竞赛</span>
+                        <li><span>2023——2024年 北京航空航天大学学科竞赛</span>
                         <span class="duration">特等奖学金</span></li>
                     </div>
                     <div class="award-item">
-                        <li><span>2023–2024年 北京航空航天大学创新创业</span>
+                        <li><span>2023——2024年 北京航空航天大学创新创业</span>
                         <span class="duration">一等奖学金</span></li>
                     </div>
                 </ul>
@@ -184,7 +238,7 @@
             <h2>项目经历 </h2>
             <div class="section-content">
                 <span class="item-title">算法方面——基于深度学习的图像压缩预编码</span>
-                <span class="duration">2025. 07-2025.08 </span>
+                <span class="duration">2025. 07——2025.08 </span>
                 <ul>
                     <li>项目目标: 通过预编码网络对图像进行前处理，优化编码器性能，尤其是在低码率下保持更好的图像细节和感知质量 。</li>
                     <li>核心方法: 采用 <span class="code-emphasis">对抗性训练</span> 和 <span class="code-emphasis">GAN</span> 原理进行联合优化 。利用 GAN 生成器根据判别器反馈，不断调整自身参数，生成高质量预编码图像 。</li>
@@ -197,7 +251,7 @@
                 </ul>
 
                 <span class="item-title">基于颗粒物浓度和可见光图像的粉尘超标预警技术 (电创赛项目) </span>
-                <span class="duration">2024.10 - 2025.03 </span>
+                <span class="duration">2024.10——2025.03 </span>
                 <ul>
                     <li>本人负责内容: NV <span class="code-emphasis">Jetson nano</span> 的 Linux 开发、5G 通信、基于 <span class="code-emphasis">YoloV8</span> 的粉尘烟雾目标识别，以及 LORA 通信 。</li>
                 </ul>
@@ -208,9 +262,9 @@
             <h2>技能和感兴趣的研究方向 </h2>
             <div class="section-content">
                 <ul>
-                    <li>**主要技能:** <span class="code-emphasis">C</span>、<span class="code-emphasis">Verilog</span>、<span class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
-                    <li>**工具与平台:** 熟悉 Linux 操作系统，熟悉嵌入式系统开发调试，PCB 电路设计。</li>
-                    <li>**感兴趣的研究方向:** 无线通信、深度学习与优化算法、目标识别检测与跟踪、雷达信号处理 。</li>
+                    <li>主要技能: <span class="code-emphasis">C</span>、<span class="code-emphasis">Verilog</span>、<span class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
+                    <li>工具与平台:熟悉 Linux 操作系统，熟悉嵌入式系统开发调试，PCB 电路设计。</li>
+                    <li>感兴趣的研究方向:通信感知一体化，无线通信、深度学习、目标识别检测与跟踪、雷达信号处理 。</li>
                 </ul>
             </div>
         </section>
