@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 北京航空航天大学 袁天宇</title>
+    <title> 北京航空航天大学 袁天宇简历</title>
     <style>
         /* CSS 样式：黑白极简风格 (Monochrome Minimalist) */
         body {
@@ -13,7 +13,6 @@
             margin: 0;
             padding: 50px;
             background-color: #f9f9f9;
-            /* 背景改为极浅的灰色，衬托中间的简历纸张感 */
             color: #333333;
         }
 
@@ -21,9 +20,7 @@
             width: 850px;
             margin: 0 auto;
             background-color: white;
-            /* 简历主体保持纯白 */
             padding: 40px;
-            /* 给简历纸张加一点点阴影，更有质感 */
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
         }
 
@@ -32,13 +29,9 @@
             justify-content: space-between;
             align-items: center;
 
-            /* --- 核心修改：背景图层叠加 (顺序很重要，最上面的在最顶层) --- */
             background-image:
-
                 linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #ffffff 100%),
-
                 linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-
                 url('banner.jpg');
 
             background-size: cover;
@@ -48,17 +41,12 @@
             margin-left: -40px;
             margin-right: -40px;
 
-            /* 增加内边距 */
             padding: 40px;
-
-            /* 设为直角 */
             border-radius: 0;
-
             margin-bottom: 30px;
             border-bottom: none;
         }
 
-        /* 左侧文本区域 */
         .header-left {
             flex: 1;
         }
@@ -69,39 +57,38 @@
             margin-bottom: 5px;
             font-size: 2.5em;
             font-weight: 700;
-            /* 移除之前的下划线，因为现在在背景框里 */
             border-bottom: none;
             padding-bottom: 0;
         }
 
-        /* 联系方式样式 */
         .header-contact {
             text-align: left;
             font-size: 0.95em;
             color: #333333;
-            /* 加深一点颜色，防止背景干扰 */
             line-height: 1.8;
             font-weight: 500;
         }
 
-        .header-contact a {
+        .header-contact a, 
+        .final-cert-link { /* 统一链接颜色 */
             color: #111111;
             text-decoration: underline;
         }
+        .header-contact a:hover,
+        .final-cert-link:hover {
+            color: #666666;
+        }
 
-        /* 照片样式 */
+
         .profile-photo {
             width: 110px;
             height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            /*以此白色边框将照片与背景图隔开*/
             border: 4px solid #ffffff;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            /* 给照片加点投影 */
             margin-left: 20px;
         }
-
 
         h2 {
             color: #333333;
@@ -149,30 +136,27 @@
             font-weight: 600;
             color: #333333;
         }
+        
+        /* 新增：底部统一链接的样式 */
+        .final-link-section {
+            margin-top: 50px;
+            text-align: center; /* 居中显示 */
+            padding-top: 25px;
+            border-top: 1px dashed #cccccc; /* 加一条虚线分隔 */
+        }
+        .final-link-section p {
+            font-size: 1.05em;
+            color: #333333;
+            margin-bottom: 0;
+        }
 
         @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .resume-container {
-                box-shadow: none;
-                border: none;
-                width: 100%;
-                padding: 0;
-            }
-
-            .header-container {
-                background-image: none !important;
-                border-bottom: 2px solid #333;
-                padding: 0;
-            }
-
-            .profile-photo {
-                border: none;
-                box-shadow: none;
-            }
+            body { background: white; padding: 0; }
+            .resume-container { box-shadow: none; border: none; width: 100%; padding: 0; }
+            .header-container { background-image: none !important; border-bottom: 2px solid #333; padding: 0; }
+            .profile-photo { border: none; box-shadow: none; }
+            /* 打印时移除底部虚线 */
+            .final-link-section { border-top: none; } 
         }
     </style>
 </head>
@@ -186,7 +170,7 @@
                 <h1>袁天宇</h1>
                 <div class="header-contact">
                     <div>21岁 | 男 </div>
-                    <div>邮箱: 22373338@buaa.edu.cn</div>
+                    <div>邮箱: <a href="mailto:22373338@buaa.edu.cn">22373338@buaa.edu.cn</a></div>
                     <div>
                         <strong>在线简历:</strong> 
                         <a href="https://ytybuaa.github.io/CV/" target="_blank">https://ytybuaa.github.io/CV/</a>
@@ -211,11 +195,11 @@
                 <p><strong>有代表性的专业课</strong>:</p>
                 <ul>
                     <li>数字信号处理 (<span class="code-emphasis">91</span>)，信息论基础 (<span
-                            class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>), 工科数学分析(1)
+                                class="code-emphasis">91</span>)，数字电路 (<span class="code-emphasis">90</span>), 工科数学分析(1)
                         (<span class="code-emphasis">88</span>) </li>
                     <li>自动控制原理 (<span class="code-emphasis">90</span>)，高频电子电路 (<span
-                            class="code-emphasis">87</span>)，信号与系统 (<span class="code-emphasis">87</span>)，电路分析 (<span
-                            class="code-emphasis">85</span>) </li>
+                                class="code-emphasis">87</span>)，信号与系统 (<span class="code-emphasis">87</span>)，电路分析 (<span
+                                class="code-emphasis">85</span>) </li>
                 </ul>
             </div>
         </section>
@@ -227,21 +211,22 @@
                         <li><span>2024——2025年 北京航空航天大学本科生校级学习优秀</span>
                             <span class="duration">二等奖学金</span>
                         </li>
-                        <div class="award-item">
-                            <li><span>2023——2024年 北京航空航天大学本科生校级学习优秀</span>
-                                <span class="duration">二等奖学金</span>
-                            </li>
-                        </div>
-                        <div class="award-item">
-                            <li><span>2023——2024年 北京航空航天大学学科竞赛</span>
-                                <span class="duration">特等奖学金</span>
-                            </li>
-                        </div>
-                        <div class="award-item">
-                            <li><span>2023——2024年 北京航空航天大学创新创业</span>
-                                <span class="duration">一等奖学金</span>
-                            </li>
-                        </div>
+                    </div>
+                    <div class="award-item">
+                        <li><span>2023——2024年 北京航空航天大学本科生校级学习优秀</span>
+                            <span class="duration">二等奖学金</span>
+                        </li>
+                    </div>
+                    <div class="award-item">
+                        <li><span>2023——2024年 北京航空航天大学学科竞赛</span>
+                            <span class="duration">特等奖学金</span>
+                        </li>
+                    </div>
+                    <div class="award-item">
+                        <li><span>2023——2024年 北京航空航天大学创新创业</span>
+                            <span class="duration">一等奖学金</span>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </section>
@@ -289,7 +274,7 @@
                         在指导下<strong>独立复现</strong>该算法。旨在通过预编码网络对图像进行前处理，在不改变现有编解码器标准的前提下，显著提升低码率下的图像细节表现和感知质量。</li>
                     <li><strong>训练策略:</strong> 设计分阶段训练。初期利用 <span class="code-emphasis">Mimic Codec</span> (模拟编解码器)
                         确保网络捕获压缩特征；进而引入<strong>对抗性训练</strong>，借鉴<span
-                            class="code-emphasis">黑盒攻击</span>思想，利用真实编解码器生成高质量“伪标签”以指导优化。</li>
+                                class="code-emphasis">黑盒攻击</span>思想，利用真实编解码器生成高质量“伪标签”以指导优化。</li>
                     <li><strong>核心优化:</strong> 构建基于 <span class="code-emphasis">GAN</span>
                         的联合优化循环。将伪标签作为判别器输入，生成器根据判别器的反馈不断迭代参数，通过这种“生成-判别”的博弈循环，有效解决了传统预编码难以对真实Codec进行端到端优化的问题。</li>
                 </ul>
@@ -306,10 +291,10 @@
                 <span class="duration">2024.10——2025.03 </span>
                 <ul>
                     <li><strong>核心职责:</strong> 负责 <span class="code-emphasis">Jetson Nano</span> 边缘计算平台的 <strong>Linux
-                            系统开发</strong>与环境部署。</li>
+                        系统开发</strong>与环境部署。</li>
                     <li><strong>技术实现:</strong> 部署 <span class="code-emphasis">YoloV8</span>
                         轻量化模型实现粉尘烟雾的实时目标检测；设计多模态通信链路，同时支持 <span class="code-emphasis">5G</span> 高速图传与 <span
-                            class="code-emphasis">LoRa</span> 远距离低功耗控制信号传输。</li>
+                                class="code-emphasis">LoRa</span> 远距离低功耗控制信号传输。</li>
                 </ul>
             </div>
         </section>
@@ -319,18 +304,27 @@
             <div class="section-content">
                 <ul>
                     <li>编程语言: <span class="code-emphasis">C</span>、<span class="code-emphasis">Verilog</span>、<span
-                            class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
+                                class="code-emphasis">Matlab</span>、<span class="code-emphasis">Python</span> 。</li>
                     <li>工具与平台:熟悉 Linux 操作系统，熟悉嵌入式系统开发调试，熟悉PCB 电路设计。</li>
-                    <li>Research Interests:通信感知一体化、无线通信、深度学习、目标识别检测与跟踪、雷达信号处理 。</li>
+                    <li>研究兴趣:通信感知一体化、无线通信、深度学习、目标识别检测与跟踪、雷达信号处理 。</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2> Personal Development Plan</h2>
+            <h2>未来规划</h2>
             <div class="section-content">
                 <p>信息与通信工程 (081000) 学硕 </p>
             </div>
+        </section>
+        
+        <section class="final-link-section">
+            <p>
+                <strong>奖学金、竞赛奖项证明请点击此处查验：</strong> 
+                <a href="Certificates/certificates.pdf" target="_blank" class="final-cert-link">
+                    [ PDF 证明集合 ]
+                </a>
+            </p>
         </section>
 
     </div>
